@@ -18,7 +18,7 @@
     <input type="tel" id="numerictype" min="0" inputmode="numeric" pattern="[0-9]*"> -->
     <form>
         <input type="number" pattern="[0-9]*"/>
-        <input type="tel" autofocus/>
+        <input type="tel" id="numerictype" autofocus/>
     </form>
     
     <script>
@@ -27,12 +27,11 @@
         // });
     
         $(document).ready(function() {
-                setTimeout(function() {
-                    $('#numerictype').trigger('click');
-                }, 1000);
-                $('#numerictype').click(function(e) {
-                    $(this).focus();
-                });
+                // setTimeout(function() {
+                //     $('#numerictype').trigger('click');
+                // }, 1000);
+                $('#numerictype').off('click').on('click', function (){ $('#numerictype').focus(); }) 
+                $('#numerictype').trigger('click');
                 // $('#numerictype').focus(function() {
                 //     alert("hi you just get focused");
                 // })
