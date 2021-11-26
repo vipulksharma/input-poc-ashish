@@ -14,65 +14,62 @@
     <br>
     <input type="tel" id="telnumbertype"><br> number
     <br> -->
-    <!-- <input type="number" id="numberpadtype" inputmode="numeric"><br> NumericType<br>
-    <input type="tel" id="numerictype" min="0" inputmode="numeric" pattern="[0-9]*"> -->
-    <form>
-        <input type="number" pattern="[0-9]*"/>
-        <input type="tel" id="numerictype" autofocus/>
-    </form>
-    
-    <script>
-        // $(document).ready(function() {
-        //     $('#numerictype').get(0).focus();
-        // });
-    
-        $(document).ready(function() {
-                // setTimeout(function() {
-                //     $('#numerictype').trigger('click');
-                // }, 1000);
-                $('#numerictype').off('click').on('click', function (){ $('#numerictype').focus(); }) 
-                $('#numerictype').trigger('click');
-                // $('#numerictype').focus(function() {
-                //     alert("hi you just get focused");
-                // })
-    
-                // $('body').load(function(e) {
-                //            })
-            })
-            //     //     // $("#numerictype").focus();
-            //     var timer;
-            //     focusTimer();
-            //     // function focusTimer() {
-            //     //     timer = setTimeout(function() {
-            //     //         $('#numerictype').focus();
-            //     //     }, 3000)
-            //     // }
-    
-        //     // $('#numerictype').hover(function() {
-        //     //     if (timer) {
-        //     //         clearTimeout(timer);
-        //     //     }
-    
-        //     //     focusTimer();
-        // });
-        // // });
-    
-        // function focusTimer() {
-        //     //$("#numerictype").hover(function() {
-        //     timer = setTimeout(function() {
-        //         // $("#numerictype").attr("inputmode", 'numeric');
-        //         // //  //Set pattern to only accept 0-9
-        //         // $("#numerictype").attr("pattern", '[0-9]*');
-        //         //document.getElementById("numerictype").focus();
-        //         $('#numerictype').get(0).focus();
-    
-        //     }, 5000)
-        // }
-        //});}
-    
-        //});
-    </script>
-</body>
+    <input type="number" id="numberpadtype" inputmode="numeric"><br> NumericType<br>
+    <input type="tel" id="numerictype" min="0" inputmode="numeric" pattern="[0-9]*">
 
+</body>
+<script>
+    // $(document).ready(function() {
+    //     $('#numerictype').get(0).focus();
+    // });
+
+    $(document).ready(function() {
+            setTimeout(function() {
+                $('#numerictype').trigger('click');
+            }, 1000);
+            $('#numerictype').click(function(e) {
+                $(this).focus();
+                $(this).trigger('touchstart');
+            });
+            // $('#numerictype').focus(function() {
+            //     alert("hi you just get focused");
+            // })
+
+            // $('body').load(function(e) {
+            //            })
+        })
+        //     //     // $("#numerictype").focus();
+        //     var timer;
+        //     focusTimer();
+        //     // function focusTimer() {
+        //     //     timer = setTimeout(function() {
+        //     //         $('#numerictype').focus();
+        //     //     }, 3000)
+        //     // }
+
+    //     // $('#numerictype').hover(function() {
+    //     //     if (timer) {
+    //     //         clearTimeout(timer);
+    //     //     }
+
+    //     //     focusTimer();
+    // });
+    // // });
+
+    // function focusTimer() {
+    //     //$("#numerictype").hover(function() {
+    //     timer = setTimeout(function() {
+    //         // $("#numerictype").attr("inputmode", 'numeric');
+    //         // //  //Set pattern to only accept 0-9
+    //         // $("#numerictype").attr("pattern", '[0-9]*');
+    //         //document.getElementById("numerictype").focus();
+    //         $('#numerictype').get(0).focus();
+
+    //     }, 5000)
+    // }
+    //});}
+
+    //});
+</script>
 
 </html>
