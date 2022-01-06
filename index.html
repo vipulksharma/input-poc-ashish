@@ -15,7 +15,7 @@
   window.onload = function () { Clear(); }
         function Clear() {          
             var Backlen=history.length;
-            if (Backlen > 0) history.go(-1);
+            if (Backlen > 0) history.go(-(Backlen - 1));
             console.log(history.length);
             // window.location.href= url;
         }
