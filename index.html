@@ -19,9 +19,9 @@
             if (Backlen > 0) 
             {
               history.go(-Backlen);
-              window.location = url;
+              history.pushState({}, '', url);
+              window.location.replace(url);
             }
-            
         }
 </script>
 
