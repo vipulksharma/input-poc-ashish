@@ -19,9 +19,7 @@
             if (Backlen > 0) 
             {
               history.go(-Backlen);
-              // history.replaceState({}, null, url);
-              console.log(url);
-              history.replaceState({}, null, url);
+              window.location = url;
             }
             
         }
