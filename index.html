@@ -16,10 +16,14 @@
         function Clear() {          
             var Backlen=history.length;
             var url = window.location.href;
-            if (Backlen > 0) history.go(-(Backlen - 1));
-            console.log(history.length);
-            window.location.href= url;
-            return false;
+            if (Backlen > 0) 
+            {
+              history.go(-(Backlen - 1));
+              console.log(history.length);
+              console.log('url here');
+              window.location.href= url;
+              return false;
+            }
             
         }
 </script>
