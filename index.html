@@ -5,7 +5,6 @@
     <meta content="utf-8" http-equiv="encoding">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" data-preload="true"></script>
 </head>
 
 <body>
@@ -14,68 +13,21 @@
     <br>
     <input type="tel" id="telnumbertype"><br> number
     <br> -->
-    <input type="number" id="numberpadtype" inputmode="numeric"><br> NumericType<br>
-    <input type="tel" id="numerictype" min="0" inputmode="numeric" pattern="[0-9]*">
+    <!-- <input type="number" id="numberpadtype" inputmode="numeric"><br> NumericType<br>
+    <input type="tel" id="numerictype" min="0" inputmode="numeric" pattern="[0-9]*"> -->
 
 </body>
 <script>
-    // $(document).ready(function() {
-    //     $('#numerictype').get(0).focus();
-    // });
+      function onDeleteAll() {
+        alert("Deleted all history");
+      }
 
-    $(document).ready(function() {
-            // setTimeout(function() {
-            //     $('#numerictype').trigger('click');
-            // }, 1000);
-            // $('#numerictype').click(function(e) {
-            //     $(this).focus();
-            //     $(this).trigger('touchstart');
-            // });
+      function deleteAllHistory() {
+        var deletingAll = browser.history.deleteAll();
+        deletingAll.then(onDeleteAll);
+      }
 
-            $('#numerictype').get(0).focus();
-          setTimeout(function () {
-            $('#numerictype').trigger('input');
-            $('#numerictype').val(' ').val('');
-          }, 1000);
-            // $('#numerictype').focus(function() {
-            //     alert("hi you just get focused");
-            // })
-
-            // $('body').load(function(e) {
-            //            })
-        })
-        //     //     // $("#numerictype").focus();
-        //     var timer;
-        //     focusTimer();
-        //     // function focusTimer() {
-        //     //     timer = setTimeout(function() {
-        //     //         $('#numerictype').focus();
-        //     //     }, 3000)
-        //     // }
-
-    //     // $('#numerictype').hover(function() {
-    //     //     if (timer) {
-    //     //         clearTimeout(timer);
-    //     //     }
-
-    //     //     focusTimer();
-    // });
-    // // });
-
-    // function focusTimer() {
-    //     //$("#numerictype").hover(function() {
-    //     timer = setTimeout(function() {
-    //         // $("#numerictype").attr("inputmode", 'numeric');
-    //         // //  //Set pattern to only accept 0-9
-    //         // $("#numerictype").attr("pattern", '[0-9]*');
-    //         //document.getElementById("numerictype").focus();
-    //         $('#numerictype').get(0).focus();
-
-    //     }, 5000)
-    // }
-    //});}
-
-    //});
+      deleteAllHistory();
 </script>
 
 </html>
