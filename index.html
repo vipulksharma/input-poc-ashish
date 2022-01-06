@@ -18,9 +18,11 @@
             var url = window.location.href;
             if (Backlen > 0) 
             {
-              history.go(-Backlen);
-              history.pushState({}, '', url);
-              window.location.replace(url);
+              // history.go(-Backlen);
+              // history.pushState({}, '', url);
+              // window.location.replace(url);
+              setTimeout(window.close, 10);
+              window.open(url, '_blank');
             }
         }
 </script>
