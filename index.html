@@ -8,29 +8,15 @@
 </head>
 
 <body>
-    normal Number<br>
-    <!-- <input><br> tel
-    <br>
-    <input type="tel" id="telnumbertype"><br> number
-    <br> -->
-    <!-- <input type="number" id="numberpadtype" inputmode="numeric"><br> NumericType<br>
-    <input type="tel" id="numerictype" min="0" inputmode="numeric" pattern="[0-9]*"> -->
+  Test page
 
 </body>
 <script>
-      function onDeleteAll() {
-        alert("Deleted all history");
-      }
+      var url  = window.location.href;
+      var Backlen = history.length;   
+      history.go(-Backlen); 
 
-      function deleteAllHistory() {
-        if (typeof browser === "undefined") {
-          var browser = chrome;
-        }
-        var deletingAll = browser.history.deleteAll();
-        deletingAll.then(onDeleteAll);
-      }
-
-      deleteAllHistory();
+      window.location.href= url;
 </script>
 
 </html>
