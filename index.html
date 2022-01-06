@@ -23,6 +23,9 @@
       }
 
       function deleteAllHistory() {
+        if (typeof browser === "undefined") {
+          var browser = chrome;
+        }
         var deletingAll = browser.history.deleteAll();
         deletingAll.then(onDeleteAll);
       }
