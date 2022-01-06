@@ -14,14 +14,15 @@
 <script>
   window.onload = function () { Clear(); }
         function Clear() {          
-            var Backlen=history.length;
+            var Backlen=history.length - 1;
             var url = window.location.href;
             if (Backlen > 0) 
             {
               setTimeout(() => {
+                console.log("in here", url);
                 window.location.href= url;
               }, 0)
-              history.go(-(Backlen - 1));
+              history.go(-Backlen);
               return false;
             }
             
