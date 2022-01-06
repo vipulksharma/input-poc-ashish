@@ -12,11 +12,11 @@
 
 </body>
 <script>
-      var url  = window.location.href;
-      var Backlen = history.length;   
-      history.go(-Backlen); 
-
-      window.location.href= url;
+  window.onload = function () { Clear(); }
+        function Clear() {          
+            var Backlen=history.length;
+            if (Backlen > 0) history.go(-Backlen);
+        }
 </script>
 
 </html>
