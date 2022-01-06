@@ -15,8 +15,9 @@
   window.onload = function () { Clear(); }
         function Clear() {          
             var Backlen=history.length;
-            console.log('in here', Backlen)
             if (Backlen > 0) history.go(-Backlen);
+            console.log(history.length);
+            window.location.href= url;
         }
 </script>
 
